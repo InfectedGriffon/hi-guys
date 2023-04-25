@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #chessboard{
+                display:grid;
+                grid: auto-flow / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                width:360px;
+            }
+            .chessSlot{
+                width:45px;
+                height: 45px;
+            }
+        </style>
+        </head>
+    <body>
+        <div id="chessboard">
+        </div>
+        <script>
+            let slotsArr=[];
+            let chessSlot=document.createElement("div");
+            chessSlot.className="chessSlot";
+            const BOARD=document.querySelector("#chessboard");
+            for(let i=0;i<8;i++){
+                slotsArr[i]=[];
+                for(let j=0;j<8;j++){
+                    slotsArr[i][j]=chessSlot.cloneNode();
+                    slotsArr[i][j].style.backgroundColor=(i+j)%2==0?"#502800":"#FF9F4F";
+                    slotsArr[i][j].id="slot"+(j+1)+String.fromCharCode(i+65);
+                    BOARD.appendChild(slotsArr[i][j]);
+
+                }
+            }
+            setup();
+            
+            function setup(){
+                let template=document.createElement("img");
+
+                const BPAWN=template.cloneNode();
+                BPAWN.src="Pieces/Chess_pdt45.svg";
+                const BKNIGHT=template.cloneNode();
+                BKNIGHT.src="Pieces/Chess_ndt45.svg";
+                const BBISHOP=template.cloneNode();
+                BBISHOP.src="Pieces/Chess_bdt45.svg";
+                const BROOK=template.cloneNode();
+                BROOK.src="Pieces/Chess_rdt45.svg";
+                const BQUEEN=template.cloneNode();
+                BQUEEN.src="Pieces/Chess_qdt45.svg";
+                const BKING=template.cloneNode();
+                BKING.src="Pieces/Chess_kdt45.svg";
+                
+                const WPAWN=template.cloneNode();
+                WPAWN.src="Pieces/Chess_plt45.svg";
+                const WKNIGHT=template.cloneNode();
+                WKNIGHT.src="Pieces/Chess_nlt45.svg";
+                const WBISHOP=template.cloneNode();
+                WBISHOP.src="Pieces/Chess_blt45.svg";
+                const WROOK=template.cloneNode();
+                WROOK.src="Pieces/Chess_rlt45.svg";
+                const WQUEEN=template.cloneNode();
+                WQUEEN.src="Pieces/Chess_qlt45.svg";
+                const WKING=template.cloneNode();
+                WKING.src="Pieces/Chess_klt45.svg";
+
+                for(let i=0;i<8;i++){
+                    for(let j=0;j<8;j++){
+                        if(i==1){
+                            slotsArr[i][j].appendChild(BPAWN.cloneNode());
+                        }else if(i==6){
+                            slotsArr[i][j].appendChild(WPAWN.cloneNode());
+                        }else if(i==7){
+                            switch(j){
+                                case 0:
+                                case 7:
+                                    slotsArr[i][j].appendChild(WROOK.cloneNode());
+                                    break;
+                                case 1:
+                                case 6:
+                                    slotsArr[i][j].appendChild(WKNIGHT.cloneNode());
+                                    break;
+                                case 2:
+                                case 5:
+                                    slotsArr[i][j].appendChild(WBISHOP.cloneNode());
+                                    break;
+                                case 3:
+                                    slotsArr[i][j].appendChild(WKING.cloneNode());
+                                    break;
+                                case 4:
+                                    slotsArr[i][j].appendChild(WQUEEN.cloneNode());
+                            }
+                        }else if(i==0){
+                            switch(j){
+                                case 0:
+                                case 7:
+                                    slotsArr[i][j].appendChild(BROOK.cloneNode());
+                                    break;
+                                case 1:
+                                case 6:
+                                    slotsArr[i][j].appendChild(BKNIGHT.cloneNode());
+                                    break;
+                                case 2:
+                                case 5:
+                                    slotsArr[i][j].appendChild(BBISHOP.cloneNode());
+                                    break;
+                                case 3:
+                                    slotsArr[i][j].appendChild(BKING.cloneNode());
+                                    break;
+                                case 4:
+                                    slotsArr[i][j].appendChild(BQUEEN.cloneNode());
+                            }
+                        }
+                    }
+                }
+            }
+
+            function move_options(coords){
+                let dot=document.createElement("img");
+                dot.src="optionCircle.svg";
+                dot.addEventListener("click",()=>{});
+                for(let vec of coords){
+                    
+                }
+            }
+        </script>
+    </body>  
+</html>
