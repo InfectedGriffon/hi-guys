@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 let content = "let hey = {"
 let closingBrackets = "}"
 let callers = "."
@@ -16,4 +14,6 @@ content += 'final:"woah"'
         + callers
         + "final)"
 
-fs.writeFileSync('javascript/ok.js', content, e=>debug.log(e))
+import('fs').then((fs) =>
+    fs.writeFileSync('javascript/ok.js', content, e=>debug.log(e))
+)
