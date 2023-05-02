@@ -1,0 +1,94 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: white;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #35393e;
+}
+
+main{
+  *{
+    position:absolute;
+    text-align: center;
+  }
+  .charStat{
+    width:2ch;
+  }
+  h1{
+    font-size: 48px;
+  }
+  h2{
+    font-size:42px;
+  }
+  #backsheet{
+    width:1200px;
+    height:600px;
+  }
+  #name{
+    top:0px;
+    left:1000px;
+  }
+  #health{
+    top:0px;
+    left:280px;
+  }
+  #swift{
+    top:90px;
+    left:235px;
+  }
+
+  #thought{
+    top:90px;
+    left:325px;
+  }
+
+  #aim{
+    top:165px;
+    left:190px;
+  }
+
+  #charm{
+    top:165px;
+    left:280px;
+  }
+
+  #lore{
+    text-align: start;
+    color:black;
+    font-size:18px;
+    top:370px;
+    width:380px;
+    height:200px;
+    overflow-wrap:break-word;
+    background:none;
+    border: none;
+  }
+
+  #loreHeader{
+    top:270px;
+    left:50px;
+  }
+
+  #conciousness{
+    width:60px;
+    height: 60px;
+    top:530px;
+    left:222px;
+  }
+
+  #species{
+    width:70px;
+    height: 70px;
+    top:520px;
+    left:307px;
+  }
+
+  #carClass{
+    width:150px;
+    height:150px;
+    left:40px;
+    top:45px;
+  }
+
+}

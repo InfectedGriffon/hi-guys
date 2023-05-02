@@ -1,0 +1,82 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: white;
+  background-color: #35393e;
+}
+
+main * {
+  position: absolute;
+  text-align: center;
+}
+main .charStat {
+  width: 2ch;
+}
+main h1 {
+  font-size: 48px;
+}
+main h2 {
+  font-size: 42px;
+}
+main #backsheet {
+  width: 1200px;
+  height: 600px;
+}
+main #name {
+  top: 0px;
+  left: 1000px;
+}
+main #health {
+  top: 0px;
+  left: 280px;
+}
+main #swift {
+  top: 90px;
+  left: 235px;
+}
+main #thought {
+  top: 90px;
+  left: 325px;
+}
+main #aim {
+  top: 165px;
+  left: 190px;
+}
+main #charm {
+  top: 165px;
+  left: 280px;
+}
+main #lore {
+  text-align: start;
+  color: black;
+  font-size: 18px;
+  top: 370px;
+  width: 380px;
+  height: 200px;
+  overflow-wrap: break-word;
+  background: none;
+  border: none;
+}
+main #loreHeader {
+  top: 270px;
+  left: 50px;
+}
+main #conciousness {
+  width: 60px;
+  height: 60px;
+  top: 530px;
+  left: 222px;
+}
+main #species {
+  width: 70px;
+  height: 70px;
+  top: 520px;
+  left: 307px;
+}
+main #carClass {
+  width: 150px;
+  height: 150px;
+  left: 40px;
+  top: 45px;
+}
+
+/*# sourceMappingURL=style.css.map */
