@@ -17,3 +17,11 @@
     run `nim c -r <file>.nim`
 
     or if already compiled, just run the .exe file
+
+- C/C++
+
+    use g++ or clang to compile
+    
+    there are five hundred command line options
+
+    run executable file with `.\name`
